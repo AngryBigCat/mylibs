@@ -15,24 +15,13 @@ function __autoload($className)
     }
 }
 
-$img = new Image('images');
-$cut = $img->cut('xampp-cloud@2x.png', 10, 10, 500, 500);
-$water = $img->watermark($cut, 'windows-logo.png', 9);
-echo $img->thumb($water, 100, 100);
+$tpl = new Tpl;
 
+$tpl->assign('var', 'xxxxx');
+$tpl->assign('asd', false);
+$tpl->assign('arrs', ['num1', 'num2', 'num3', 'num4']);
+
+$tpl->display('index.html');
 
 ?>
 
-<!doctype html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-<form action="" enctype="multipart/form-data" method="post">
-    <input type="file" name="userfile">
-    <input type="submit" value="提交">
-</form>
-</body>
-</html>
